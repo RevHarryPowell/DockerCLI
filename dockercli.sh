@@ -50,10 +50,10 @@ else
 fi
 
 # Start bash or sh terminal in selected container, whichever is supported
-if docker exec $container bash | grep -q "exec failed"; then
+if docker exec $container /bin/bash | grep -q "exec failed"; then
 	echo -e "${YELLOW}Entering "$container" sh CLI...${NC}"
-	docker exec -it $container sh
+	docker exec -it $container /bin/sh
 else
 	echo -e "${YELLOW}Entering "$container" bash CLI...${NC}"
-        docker exec -it $container bash
+    docker exec -it $container /bin/bash
 fi
