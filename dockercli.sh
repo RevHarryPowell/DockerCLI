@@ -8,7 +8,7 @@
 # Color definitions
 RED='\033[1;31m'       	# Bold Red
 YELLOW='\033[1;33m'    	# Bold Yellow
-NC='\033[0m' 		# No Color
+NC='\033[0m' 			# No Color
 
 container=""
 function container_chooser {
