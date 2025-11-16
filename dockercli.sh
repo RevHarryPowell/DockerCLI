@@ -49,7 +49,7 @@ else
 	fi
 fi
 
-# Start bash or sh terminal in selected container, whichever is supported
+# Start bash or sh shell in selected container, whichever is supported
 if docker exec $container /bin/bash | grep -q "exec failed"; then
 	echo -e "${YELLOW}Entering "$container" sh CLI...${NC}"
 	docker exec -it $container /bin/sh
